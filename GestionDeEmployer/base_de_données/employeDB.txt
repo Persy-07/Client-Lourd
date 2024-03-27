@@ -1,0 +1,24 @@
+CREATE TABLE employes (
+    id_employe VARCHAR(255) PRIMARY KEY,
+    nom_complet NVARCHAR(255) NOT NULL,
+    genre NVARCHAR(50),
+    numero_contact NVARCHAR(255),
+    poste NVARCHAR(255),
+    image NVARCHAR(MAX), 
+    salaire DECIMAL(10, 2),
+    date_insertion DATE,
+    date_mise_a_jour DATE,
+    date_suppression DATE,
+    statut NVARCHAR(50)
+);
+
+SELECT * FROM employes;
+
+CREATE TABLE utilisateurs (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    nom_utilisateur NVARCHAR(255) UNIQUE NOT NULL,
+    mot_de_passe NVARCHAR(255) NOT NULL,
+    date_enregistrement DATE
+);
+
+SELECT * FROM utilisateurs;
